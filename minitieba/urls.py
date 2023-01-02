@@ -31,4 +31,4 @@ urlpatterns = [
 ]
 #设置静态文件路径
 urlpatterns += staticfiles_urlpatterns()
-print("++++staticfiles:",staticfiles_urlpatterns())
+
