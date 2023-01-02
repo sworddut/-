@@ -16,17 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls import *
-from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from xiaotieba import views
 
 urlpatterns = [
     path("",views.login,name="login"),
+    path("register/",views.register,name="register"),
     path("admin/", admin.site.urls),
     path("xiaotieba/", include("xiaotieba.urls")),
     path("posts/", views.posts, name="posts"),
+    path("postSearch/",views.postSearch,name="postSearch"),
     path("loginWork/", views.loginWork, name="loginWork"),
-    
+    path("register/registerWork/", views.registerWork, name="registerWork"),    
 ]
 #设置静态文件路径
 urlpatterns += staticfiles_urlpatterns()

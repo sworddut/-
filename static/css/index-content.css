@@ -8,12 +8,13 @@
 .index-content .index-word {
   /* position: absolute;
     top:1.76rem; */
-  width: 100%;
+  width: 95%;
   height: 5rem;
-  background-color: #ccc;
+  background-color: white;
+  margin: auto;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .append-post {
@@ -26,4 +27,79 @@
   position: fixed;
   bottom: 1rem;
   right: 1.5rem;
+}
+
+.append-textarea {
+  position: fixed;
+  z-index: 5;
+  bottom: -250px;
+  width: 100%;
+  height: 250px;
+  background-color: #fff;
+}
+
+.append-textarea textarea {
+  font-size: 1rem;
+  display: block;
+  padding: 0.25rem;
+  margin: 0.5rem auto;
+  width: 90%;
+  height: 150px;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  background-color: rgba(219, 221, 221, 0.701);
+}
+
+.append-textarea button {
+  display: block;
+  height: 1.5rem;
+  width: 5rem;
+  border: 0px;
+  border-radius: 0.5rem;
+  background-color: #327ab8;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.content {
+  background-color: #F2F2F2;
+  text-align: left;
+}
+
+.index-content-name {
+  margin: 0 6px 0 8px;
+  height: 25%;
+  border-bottom: 1px solid #ccc;
+}
+
+.index-content-name span {
+  font-size: 0.75rem;
+}
+
+.index-content-text {
+  margin: 0 6px 0 8px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search-content .login {
+  font-size: 0.75rem;
+}
+
+
+.search-content button {
+  position: absolute;
+  right: 13%;
+  top: 14%;
+  /* 清除默认边框 */
+  border: 0;
+  outline: none;
+  /*清除默认背景 */
+  background-color: transparent;
+}
+
+.not-found{
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  text-align: center;
 }

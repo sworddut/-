@@ -13,6 +13,7 @@ function myAnimate(obj, target,callback) {
     }, 15);
 }
 
+// 到top的距离
 function myAnimateY(obj, target,callback) {
     clearInterval(obj.timer);
     obj.timer = setInterval(() => {
@@ -25,7 +26,6 @@ function myAnimateY(obj, target,callback) {
             }
         }
         obj.style.top = obj.offsetTop + step + 'px';
-        console.log(obj.offsetTop);
     }, 15);
 }
 

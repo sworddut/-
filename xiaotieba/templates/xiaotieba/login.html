@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/normalize.css">
     <link rel="stylesheet" href="/static/css/index.css">
     <link rel="stylesheet" href="/static/css/swiper-bundle.min.css">
@@ -14,7 +14,7 @@
     <script src="/static/js/vue.js"></script>
     <script src="/static/js/swiper-bundle.min.js"></script>
     <script src="/static/js/init.js"></script>
-    
+
     <title>login</title>
 </head>
 
@@ -123,21 +123,27 @@
                 </div>
                 <!-- 顶部搜索框 -->
                 <div class="search-content" style="background-color: rgb(52, 83, 178);">
-                    <a href="#" class="classify"></a>
+                    <div class="search-words">
+                        <span> 登录中...</span>
+                        <span> 还没账号,去<a href={% url 'register' %}>注册</a></span>
+                    </div>
                 </div>
-                
+
                 <div class="login-form">
                     <form action="loginWork">
                         <span>username:</span>
                         <input type="text" name="username">
                         <br>
-                        <span>password: </span>
+                        <span>password:&nbsp;</span>
                         <input type="password" name="password">
                         <br>
                         <button type="submit">submit</button>
                     </form>
                 </div>
-
+                {% if error != None %}
+                <div class="error">{{error}}</div>
+                {% endif %}
+                
             </div>
         </div>
     </div>
